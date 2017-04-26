@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey | FriendFinder</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+      <h1>Enter your info, then find a match!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div clas="col-md-12">
+        <form method='POST' action='http://localhost:8080/api/friends'>
+          <div class="form-group">
+            <label for="name">Name (required):</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="photoURL">Link to Your Photo (required):</label>
+            <input type="text" class="form-control" id="photoURL" required>
+          </div>
+          <div class="form-group">
+            <label for="fave-cookie">What's your favorite cookie:</label>
+            <input type="text" class="form-control" id="fave-cookie">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

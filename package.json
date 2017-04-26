@@ -1,0 +1,24 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "week 13 assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cecolby11/friend-finder.git"
+  },
+  "author": "Casey Colby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cecolby11/friend-finder/issues"
+  },
+  "homepage": "https://github.com/cecolby11/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
