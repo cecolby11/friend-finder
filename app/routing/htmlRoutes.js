@@ -12,4 +12,9 @@ module.exports = function(app) {
   app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, '../public/home.html'));
   });
+
+  app.get('/survey/friends.js', function(request, response) {
+    console.log('HERE');
+    response.sendFile(path.join(__dirname, 'friends.js'));
+  });
 }
