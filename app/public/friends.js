@@ -50,7 +50,6 @@ $(document).ready(function(){
     
     readJSON();
     console.log('its working');
-    function displayModal() {
-        $('#pop-up').modal('show');
-    }
+    
+    $('#match-modal').modal('toggle');
  });

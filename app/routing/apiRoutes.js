@@ -20,7 +20,7 @@ module.exports = function(app) {
   // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
   app.post('/api/friends', function(request, response) {
     var newFriend = request.body;
-    // TODO store new friend in friend storage
+    // store new friend in friend storage
     fs.readFile('./app/data/friends.json', function(error, data) {
       if(error) {
         console.log(error);
@@ -35,6 +35,7 @@ module.exports = function(app) {
         });
       }
     });
-    // TODO do some work & show new friend result
+    // refresh/redirect to survey page 
+    response.redirect('/survey');
   });
 }
