@@ -4,7 +4,7 @@ $(document).ready(function(){
         var queryURL = 'http://localhost:8080/api/friends';
         $.ajax({
             url: queryURL,
-            method: "GET"
+            method: 'GET'
         }).done(function(result) {
             console.log(result);
             var i = result.length - 1;
@@ -46,10 +46,24 @@ $(document).ready(function(){
             console.log(finalArray);
             displayModal(finalArray);    
         });
-    };
-    
+    }
+
+    function displayModal(finalArray) {
+        $('#match-modal').modal('toggle');
+        var modalContent = $('<div>');
+        modalContent.append($('<h1>Here are your best matches:</h1>'));
+        if (finalArray.length === 0) {
+            var noMatch = '<p>Sorry we need more users before we can display a match!</p>';
+            modalContent.append(noMatch);
+        } else {
+            for(var i = 0; i < finalArray.length; i++) {
+                var matchName = '<h3>' + finalArray[i].name + '</h3>';
+                var matchImage = '<img src='+finalArray[i].photoURL + ' onerror="this.src=\'https://placeholdit.imgix.net/~text?txtsize=33&txt=no_photo&w=200&h=200\'">';
+                modalContent.append(matchName).append(matchImage);
+            }
+        }
+        $('#match-modal .modal-body').html(modalContent);
+    }
     readJSON();
-    console.log('its working');
-    
-    $('#match-modal').modal('toggle');
+
  });
