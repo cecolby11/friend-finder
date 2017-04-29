@@ -1,0 +1,14 @@
+.profile-img {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+.match-name {
+  font-weight: 300;
+  font-size: 32px;
+  color: red;
+}
+.modal-body {
+  background:#eee;
+  text-align: center;
+}

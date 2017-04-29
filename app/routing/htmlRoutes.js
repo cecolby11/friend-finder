@@ -1,15 +1,16 @@
+// DEPENDENCIES
 var express = require('express');
 var app = express();
 var path = require('path');
+
+// ROUTES
 module.exports = function(app) {
-    console.log('Got HTML routes');
     app.get("/", function(request, response) {
         response.sendFile(path.join(__dirname, "/../public/home.html"));
     });
     app.get("/survey", function(request, response) {
         response.sendFile(path.join(__dirname, "/../public/survey.html"));
     });
-    app.get("/friends.js", function(request,response){
-        response.sendFile(path.join(__dirname, '../public/friends.js'));
-    });
+    // serve up static files
+    app.use(express.static(__dirname + "/../public"));
 };
