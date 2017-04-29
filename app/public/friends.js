@@ -10,7 +10,6 @@ $(document).ready(function(){
             url: queryURL,
             method: 'GET'
         }).done(function(result) {
-            console.log(result);
             readJSON(result);
         });
     }
